@@ -1,0 +1,239 @@
+/* Center the navigation bar */
+.topnav {
+  background-color: #003b49;
+  overflow: hidden;
+  text-align: center;
+  max-width: 400px; /* Set a maximum width for the navigation bar */
+  margin: 0 auto; /* Center the navigation bar horizontally */
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px; /* Reduce padding to make the nav bar smaller */
+  display: inline-block; /* Keep links inline-block for a horizontal layout */
+}
+
+.topnav a:hover,
+.topnav a:focus {
+  background-color: white;
+  color: #003b49;
+  outline: none;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: #003b49;
+}
+
+/* Hide focus outline for mouse users but show for keyboard users */
+.topnav a:not(:focus):not(:active) {
+  outline: 0;
+}
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #003b49;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #003b49;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+input[type="checkbox"] {
+  
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 16px;
+  height: 16px;
+  border: 1px solid #003b49;
+  border-radius: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #003b49;
+}
+
+
+label {
+  
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.5; /* Adjust line height for readability */
+  font-size: 16px; /* Adjust font size as needed for readability */
+  color: #333; /* Ensure sufficient contrast for readability */
+  margin-bottom: 10px; /* Provide spacing between paragraphs */
+}
+
+/* styles.css */
+
+.site-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  text-decoration: underline;
+}
+
+.footer-info {
+  text-align: center;
+}
+
+/* Hide focus outline for mouse users but show for keyboard users */
+.footer-nav a:not(:focus):not(:active) {
+  outline: 0;
+}
