@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <header>
+    <a href="#">
+      <img src="images/empowerabilitylabslogo.png" alt="empowerability labs" class="logo" tabindex="0">
+    </a>
+  </header>
+   
+  <nav class="topnav" role="navigation" aria-label="Main" >
+    <a href="home.html" aria-current="page">Home</a>
+    <a href="services.html">Services</a>
+    <a href="html.html">Schedule a call</a>
+  </nav>
+
+  
+  
+
+<h1>Schedule a Call</h1>
+
+<p id="subtitle"> Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive <br> experiences. Fill out the form below and we'll get back to you as soon as we can to schedule a call with our sales team!</p>
+
+
+<ul id="error-list"></ul>
+<form id="schedule-a-call" novalidate>
+  <div>
+    <label for="business_name">Business Name:</label>
+    <input type="text" id="business_name" name="business_name" required aria-required="true" required>
+  </div>
+
+  <div>
+    <label for="Phone Number">Phone Number:</label>
+    <input type="text" id="Phone Number" name="phone_number" required aria-required="true" required>
+  </div>
+
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required aria-required="true" required>
+  </div>
+
+  <div>
+    <fieldset>
+      <legend>What would you like to talk about?</legend>
+      <div>
+        <input type="checkbox" id="checkboxA" name="optionA">
+        <label for="checkboxA">Awareness, labs and workshops</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkboxB" name="optionB">
+        <label for="checkboxB">Invite a speaker with disabilities to your event</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkboxC" name="optionC">
+        <label for="checkboxC">Usability Testing </label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <label class="switch" for="toggleSwitch">
+      <input type="checkbox" id="toggleSwitch">
+      <span class="slider" id="slider"></span>
+    </label>
+  
+    <p id="status" aria-live="polite" role="status">Switch is OFF</p>
+
+    <div>
+      <input type="submit" value="Schedule a Call">
+    </div>
+  
+    <script src="js.js" defer></script>
+  </div>
+ 
+</form>
+<footer class="site-footer">
+  <div class="footer-content">
+      <nav class="footer-nav" role="navigation" aria-label="Footer">
+          <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul> 
+      </nav>
+      <p>
+        © Copyright Empower Ability Labs Inc 2023. All rights reserved. 
+       </p> 
+  </div>
+</footer>
+</body>
+</html>
