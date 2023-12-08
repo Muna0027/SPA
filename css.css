@@ -1,39 +1,71 @@
-/* Center the navigation bar */
+#home {
+  display: block
+}
+#services {
+  display: none;
+}
+#contact {
+  display: none;
+}
+
 .topnav {
-  background-color: #003b49;
+  background-color: #ffc845;
   overflow: hidden;
   text-align: center;
-  max-width: 400px; /* Set a maximum width for the navigation bar */
-  margin: 0 auto; /* Center the navigation bar horizontally */
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 .topnav a {
-  color: white;
+  color: #003b49;
   text-decoration: none;
-  padding: 10px; /* Reduce padding to make the nav bar smaller */
-  display: inline-block; /* Keep links inline-block for a horizontal layout */
+  padding: 10px;
+  display: inline-block; 
 }
 
-.topnav a:hover,
-.topnav a:focus {
-  background-color: white;
-  color: #003b49;
+.topnav a:hover {
+  background-color:#003b49;
+  color: #ffc845;
   outline: none;
 }
 
 .topnav a.active {
-  background-color: white;
-  color: #003b49;
+  background-color: #003b49;
+  color: #ffc845;
 }
 
-/* Hide focus outline for mouse users but show for keyboard users */
 .topnav a:not(:focus):not(:active) {
   outline: 0;
 }
 
+a:has(img.logo):focus {
+  outline: 1px solid blue;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
 
+div.top {
+  display: flex;
+}
 
+@media screen and (max-width: 350px) {
+  div.top {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 
+div.top header img {
+  padding:10px;
+  margin: 8px; 
+  height: 70px; 
+}
+
+div.top nav {
+  display: flex;
+  height: fit-content;
+  padding: 12px;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -56,10 +88,6 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-div {
-  margin-bottom: 15px;
-}
-
 label {
   display: block;
   font-weight: bold;
@@ -79,27 +107,54 @@ input[type="checkbox"] {
   box-sizing: border-box;
 }
 
-input[type="submit"] {
+button[type="submit"], input[type="submit"] {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #007bff;
+  background-color: #003b49;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #ffc845;
 }
 
+#tell-us {
+  display: none;
+  width: 98.5%;
+}
 
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+}
+
+.switch input:focus + .slider,
+input[type="submit"]:focus {
+  outline: 2px solid #003b49;
+  outline-offset: 4px;
+}
+
+#status {
+  display: inline;
+  margin-left: 4px;
+}
+
+#thanks {
+  width: 27%;
+  margin: auto;
+  margin-bottom: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  background: green;
+  border-radius: 6px;
+  display: none;
 }
 
 .switch input {
@@ -132,6 +187,27 @@ input[type="submit"]:hover {
   border-radius: 50%;
 }
 
+.slider:after {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 12px;
+}
+
+#toggleSwitch:checked + .slider:after{
+  content: "ON";
+  color: white;
+  justify-content: start;
+  padding-left: 4px;
+}
+
+#toggleSwitch:not(:checked) + .slider:after{
+  content: "OFF";
+  color: black;
+  justify-content: end;
+  padding-right: 4px;
+}
+
 input:checked + .slider {
   background-color: #003b49;
 }
@@ -153,18 +229,24 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#dialog {
+  margin-bottom: 40px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color:#003b49;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
 
 input[type="checkbox"] {
-  
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
   width: 16px;
   height: 16px;
   border: 1px solid #003b49;
-  border-radius: 3px;
-  margin-right: 8px;
   cursor: pointer;
 }
 
@@ -172,28 +254,43 @@ input[type="checkbox"]:checked {
   background-color: #003b49;
 }
 
+fieldset {
+  margin: 22px 0 22px 0;
+}
 
-label {
-  
+#subtitle {
+  text-align: center;
+}
+
+#schedule-a-call {
+  margin-bottom: 40px;
+}
+
+label { 
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-
-  margin-bottom: 8px;
 }
 
-p {
-  line-height: 1.5; /* Adjust line height for readability */
-  font-size: 16px; /* Adjust font size as needed for readability */
-  color: #333; /* Ensure sufficient contrast for readability */
-  margin-bottom: 10px; /* Provide spacing between paragraphs */
+.title-style {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-/* styles.css */
+::backdrop {
+ 
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 6px;
+}
 
 .site-footer {
-  background-color: #333;
-  color: white;
+  background-color: #ffc845;
+  color:#003b49;
   text-align: center;
   padding: 20px;
 }
@@ -220,7 +317,7 @@ p {
 }
 
 .footer-nav a {
-  color: white;
+  color: #003b49;
   text-decoration: none;
 }
 
@@ -229,11 +326,41 @@ p {
   text-decoration: underline;
 }
 
-.footer-info {
-  text-align: center;
-}
 
-/* Hide focus outline for mouse users but show for keyboard users */
+
 .footer-nav a:not(:focus):not(:active) {
   outline: 0;
+}
+
+#error-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  color: red;
+  margin: auto;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 350px) {
+  .row {
+    flex-direction: column !important;
+  }
+}
+
+.links {
+  display: flex;
+  flex: 1;
 }
